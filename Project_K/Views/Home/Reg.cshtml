@@ -7,13 +7,15 @@
 }
 <div class="jumbotron">
     <h2>Регистрация</h2>
-
-    <p>@Html.TextBox("Person", null, new { @placeholder = "Имя" })</p>
-    <p>@Html.TextBox("Person1", null, new { @placeholder = "Фамилия" })</p>
-    <p>@Html.TextBox("Person2", null, new { @placeholder = "Отчество" })</p>
-    <p>@Html.TextBox("Person", null, new { @placeholder = "Логин" })</p>
-    <p>@Html.TextBox("Parol", null, new { @placeholder = "Пароль" })</p>
-    <p></p>
-    <p><input class="btn btn-default" type="submit" value="Зарегистрироваться" /></p>
-    <p><a class="btn btn-default" href="http://localhost:59510/Home/Index">Зарегистрироваться</a></p>
-</div>
+    @using (Html.BeginForm("Reg", "Home", FormMethod.Post))
+    {
+        <p>@Html.TextBox("Person", null, new { @placeholder = "Имя" })</p>
+        <p>@Html.TextBox("Person1", null, new { @placeholder = "Фамилия" })</p>
+        <p>@Html.TextBox("Person2", null, new { @placeholder = "Отчество" })</p>
+        <p>@Html.TextBox("Person", null, new { @placeholder = "Логин" })</p>
+        <p>@Html.TextBox("Parol", null, new { @placeholder = "Пароль" })</p>
+        <p></p>
+        <p><input class="btn btn-default" type="submit" value="Зарегистрироваться" /></p>
+        <p><a class="btn btn-default" href="http://localhost:59510/Home/Index">Зарегистрироваться</a></p>
+    }
+    </div>
